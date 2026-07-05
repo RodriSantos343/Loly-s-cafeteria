@@ -115,21 +115,6 @@ section h2{
     transform:scale(1.05);
 }
 
-.menu{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.card{
-
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
 
 .card h3{
 
