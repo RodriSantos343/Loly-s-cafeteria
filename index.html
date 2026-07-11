@@ -6,9 +6,8 @@
     <title>Loly´s Cafetería</title>
 
     <link rel="stylesheet" href="styles.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cormorant+Garamond:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -16,15 +15,21 @@
 
 <header>
 
-    <h1>Loly´s ☕</h1>
+    <h1>Loly's ☕</h1>
 
-    <nav>
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav id="menu">
+
         <a href="#inicio">Inicio</a>
         <a href="#galeria">Galería</a>
-        <a href="https://drive.google.com/file/d/1d3PbquUmglHAZVSlq8MhLNF-oNrGcJ-i/view?usp=drivesdk" target="_blank">Menú</a>
+        <a href="TU_LINK_DEL_MENU" target="_blank">Menú</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#ubicacion">Ubicación</a>
         <a href="#contacto">Contacto</a>
+
     </nav>
 
 </header>
@@ -51,14 +56,14 @@
 
 <section id="galeria">
 
-    <h2>Nuestra Galería</h2>
+    <h2>Galería</h2>
 
     <div class="galeria">
 
+        <img src="images/cafeteria.jpeg" alt="">
         <img src="images/frappe.jpg" alt="">
         <img src="images/latte.jpg" alt="">
         <img src="images/croisant.jpg" alt="">
-        <img src="images/oreo.jpg" alt="">
 
     </div>
 
@@ -135,6 +140,40 @@ loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
 <p>© 2026 Loly´s Cafetería - Todos los derechos reservados.</p>
 
 </footer>
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click",()=>{
+
+    menu.classList.toggle("active");
+
+    if(menu.classList.contains("active")){
+
+        menuToggle.innerHTML="✕";
+
+    }else{
+
+        menuToggle.innerHTML="☰";
+
+    }
+
+});
+
+document.querySelectorAll("#menu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        menu.classList.remove("active");
+        menuToggle.innerHTML="☰";
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
