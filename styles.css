@@ -65,7 +65,7 @@ nav a:hover{
 .hero{
     height:100vh;
 
-    background-image:url("images/cafeteria.jpeg");
+    background-image:url("images/portada.jpeg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -236,6 +236,14 @@ footer{
     font-size:18px;
     transition:.3s;
     box-shadow:0 4px 10px rgba(0,0,0,.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.contacto i{
+    font-size:22px;
 }
 
 .contacto:hover{
