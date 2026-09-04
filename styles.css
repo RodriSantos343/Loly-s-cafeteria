@@ -1,360 +1,707 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Poppins,sans-serif;
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background:#fcf2e7;
-    color:#333;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
-
-    background:#502522;
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 10%;
-    position:sticky;
-    top:0;
-    z-index:1000;
+body {
+    background: #fcf2e7;
+    color: #333;
 }
 
-/* BOTON HAMBURGUESA */
 
-.menu-toggle{
-    display:none;
-    font-size:34px;
-    color:white;
-    cursor:pointer;
-    user-select:none;
-    transition:.3s;
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: #502522;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
 }
 
-.menu-toggle:hover{
-    color:#FFD369;
-}
-
-/* HEADER */
-
-header h1{
+header h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 48px;
     color: white;
     font-weight: normal;
 }
 
-nav{
-    display:flex;
-    gap:20px;
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+nav {
+    display: flex;
+    gap: 20px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+nav a {
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
 }
 
-nav a:hover{
-    color:#FFD369;
-}
-
-.hero{
-    height:100vh;
-
-    background-image:url("images/portada.jpeg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.hero-text{
-    color:white;
-    max-width:700px;
-    padding:20px;
-}
-
-.hero h2{
-    font-size:45px;
-}
-
-.hero p{
-    margin:20px 0;
-}
-
-.boton{
-    display:inline-block;
-    background:#d4a373;
-    color:white;
-    padding:15px 40px;
-    text-decoration:none;
-    border-radius:30px;
-    font-size:18px;
-    transition:.3s;
-}
-
-.boton:hover{
-    background:#b57b4b;
-    transform:scale(1.05);
-}
-
-section{
-
-    padding:70px 10%;
-}
-
-section h2{
-
-    text-align:center;
-    margin-bottom:30px;
-    color:#5c3d2e;
-}
-
-.galeria{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.galeria img{
-
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:12px;
-    transition:.4s;
-}
-
-.galeria img:hover{
-
-    transform:scale(1.05);
+nav a:hover {
+    color: #FFD369;
 }
 
 
-.card h3{
+/* =====================================================
+   BOTÓN HAMBURGUESA
+===================================================== */
 
-    color:#5c3d2e;
-    margin-bottom:10px;
+.menu-toggle {
+    display: none;
+
+    font-size: 35px;
+    color: white;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: 0.3s;
 }
 
-.card p{
-
-    font-size:20px;
-    color:#b57b4b;
+.menu-toggle:hover {
+    color: #FFD369;
 }
 
-#nosotros p{
 
-    text-align:center;
-    max-width:900px;
-    margin:20px auto;
-    line-height:1.8;
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+
+    background-image: url("images/cafeteria.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
 }
 
-iframe{
 
-    width:100%;
-    height:450px;
-    border:0;
-    border-radius:15px;
+/* Oscurecer ligeramente la imagen */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
 }
 
-#contacto{
 
-    text-align:center;
-    line-height:2;
+/* Contenido encima del fondo */
+
+.hero-text {
+    position: relative;
+
+    color: white;
+
+    max-width: 700px;
+
+    padding: 20px;
+
+    text-align: center;
 }
 
-footer{
 
-    background:#502522;
-    color:white;
-    text-align:center;
-    padding:25px;
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    width: 300px;
+    height: auto;
+
+    object-fit: cover;
+
+    margin-bottom: 25px;
 }
+
+
+/* =====================================================
+   TÍTULO HERO
+===================================================== */
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 95px;
+
+    color: #FFD369;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero-text h2 {
+    font-size: 32px;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.botones-hero {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+    background: #d4a373;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover {
+    background: #b57b4b;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo especial para el botón de aniversario */
+.boton-aniversario {
+    background: #502522;
+    border: 2px solid #FFD369;
+    color: #FFD369;
+}
+
+.boton-aniversario:hover {
+    background: #FFD369;
+    color: #502522;
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+section {
+    padding: 90px 10%;
+}
+
+section h2 {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    color: #5c3d2e;
+
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   ANIMACIÓN AL HACER SCROLL
+===================================================== */
+
+/*
+   Las secciones comienzan invisibles
+   y ligeramente abajo.
+*/
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+
+/*
+   Cuando JavaScript agrega .visible,
+   la sección aparece.
+*/
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.galeria img {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Animación al pasar el mouse */
+
+.galeria img:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   NOSOTROS
+===================================================== */
+
+#nosotros p {
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: 20px auto;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   UBICACIÓN
+===================================================== */
+
+#ubicacion {
+    text-align: center;
+}
+
+.texto-centro {
+    margin-bottom: 30px;
+}
+
+.mapa {
+    text-align: center;
+}
+
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+#contacto {
+    text-align: center;
+
+    line-height: 2;
+}
+
+.contactos {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.contacto {
+    background: #502522;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.contacto:hover {
+    background: #d4a373;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #502522;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =====================================================
+   ANIMACIONES INICIALES DEL HERO
+===================================================== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
 
 /* Logo */
 
-.logo{
-    width:300px;
-    height:auto;
-    border-radius:50%;
-    object-fit:cover;
-    margin-bottom:25px;
+.hero-text .logo {
+    animation:
+        aparecer 1s ease forwards;
 }
 
-.hero-text h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:95px;
-    color:#FFD369;
-    font-weight:700;
-    margin-bottom:15px;
-    text-shadow:2px 2px 8px rgba(0,0,0,.35);
+
+/* Título */
+
+.hero-text h1 {
+    opacity: 0;
+
+    animation:
+        aparecer 1s ease 0.2s forwards;
 }
 
-.hero-text h2{
-    font-size:32px;
-    color:white;
-    margin-bottom:20px;
+
+/* Subtítulo */
+
+.hero-text h2 {
+    opacity: 0;
+
+    animation:
+        aparecer 1s ease 0.4s forwards;
 }
 
-.hero-text p{
-    font-size:20px;
-    line-height:1.8;
-    margin-bottom:35px;
+
+/* Texto */
+
+.hero-text p {
+    opacity: 0;
+
+    animation:
+        aparecer 1s ease 0.6s forwards;
 }
 
-.hero-text{
-    text-align:center;
+
+/* Botón */
+
+.hero-text .boton {
+    opacity: 0;
+
+    animation:
+        aparecer 1s ease 0.8s forwards;
 }
 
-/* CONTACTO */
 
-.contactos{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    margin-top:30px;
+/* =====================================================
+   RESPONSIVE / CELULAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+    }
+
+
+    /* Mostrar hamburguesa */
+
+    .menu-toggle {
+        display: block;
+
+        z-index: 1001;
+    }
+
+
+    /* Menú cerrado */
+
+    nav {
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #502522;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        gap: 0;
+
+        transition:
+            max-height 0.4s ease,
+            padding 0.4s ease;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* Menú abierto */
+
+    nav.active {
+        max-height: 500px;
+
+        padding: 20px 0;
+    }
+
+
+    nav a {
+        width: 100%;
+
+        padding: 15px;
+
+        text-align: center;
+
+        font-size: 18px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 100vh;
+    }
+
+
+    .hero-text {
+        width: 90%;
+
+        margin: auto;
+    }
+
+
+    /* Logo */
+
+    .logo {
+        width: 220px;
+    }
+
+
+    /* Título */
+
+    .hero-text h1 {
+        font-size: 65px;
+    }
+
+
+    .hero-text h2 {
+        font-size: 25px;
+    }
+
+
+    .hero-text p {
+        font-size: 17px;
+    }
+
+
+    /* Secciones */
+
+    section {
+        padding: 70px 20px;
+    }
+
+
+    section h2 {
+        font-size: 30px;
+    }
+
+
+    /* =================================================
+       GALERÍA HORIZONTAL EN CELULAR
+    ================================================= */
+
+    .galeria {
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+
+        gap: 15px;
+
+        padding: 10px 0 15px;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .galeria img {
+        flex: 0 0 90%;
+
+        width: 90%;
+
+        height: 250px;
+
+        scroll-snap-align: center;
+
+        border-radius: 15px;
+    }
+
+
+    /* Ocultar scrollbar */
+
+    .galeria::-webkit-scrollbar {
+        display: none;
+    }
+
+    .galeria {
+        scrollbar-width: none;
+    }
+
+
+    /* Contactos */
+
+    .contactos {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .contacto {
+        width: 80%;
+    }
 }
 
-.contacto{
-    background:#502522;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:30px;
-    font-size:18px;
-    transition:.3s;
-    box-shadow:0 4px 10px rgba(0,0,0,.2);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-}
 
-.contacto i{
-    font-size:22px;
-}
+/* =====================================================
+   REDUCIR ANIMACIONES SI EL USUARIO LO PREFIERE
+===================================================== */
 
-.contacto:hover{
-    background:#d4a373;
-    transform:translateY(-5px);
-}
+@media (prefers-reduced-motion: reduce) {
 
-@media (max-width:768px){
-
-    header{
-        padding:15px 20px;
-        flex-direction:row;
-        justify-content:space-between;
-        align-items:center;
+    html {
+        scroll-behavior: auto;
     }
 
-    header h1{
-        font-size:42px;
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
     }
 
-    .menu-toggle{
-        display:block;
-        z-index:1001;
+    .hero-text .logo,
+    .hero-text h1,
+    .hero-text h2,
+    .hero-text p,
+    .hero-text .boton {
+        opacity: 1;
+
+        animation: none;
     }
-
-    nav{
-        position:absolute;
-        top:75px;
-        left:0;
-        width:100%;
-        background:#502522;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-
-        max-height:0;
-        overflow:hidden;
-
-        transition:max-height .4s ease;
-
-        box-shadow:0 5px 15px rgba(0,0,0,.2);
-    }
-
-    nav.active{
-        max-height:500px;
-        padding:20px 0;
-    }
-
-    nav a{
-        width:100%;
-        padding:15px;
-        text-align:center;
-        font-size:18px;
-    }
-
-    .hero{
-        padding:20px;
-    }
-
-    .logo{
-        width:180px;
-    }
-
-    .hero-text h1{
-        font-size:70px;
-    }
-
-    .hero-text h2{
-        font-size:26px;
-    }
-
-    .hero-text p{
-        font-size:16px;
-    }
-
-    .galeria{
-        display:flex;
-        flex-wrap:nowrap;
-        overflow-x:auto;
-        scroll-snap-type:x mandatory;
-        gap:15px;
-        padding:10px 0;
-        -webkit-overflow-scrolling:touch;
-    }
-
-    .galeria img{
-        flex:0 0 90%;
-        width:90%;
-        height:250px;
-        object-fit:cover;
-        scroll-snap-align:center;
-    }
-
-    .contactos{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .contacto{
-        width:85%;
-        text-align:center;
-    }
-
-}
-
-.galeria::-webkit-scrollbar{
-
-    display:none;
-}
-
-.galeria{
-
-    scrollbar-width:none;
 }

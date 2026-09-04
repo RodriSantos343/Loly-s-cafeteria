@@ -3,182 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loly´s Cafetería</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <title>Loly's Cafetería</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Cormorant+Garamond:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
+    <!-- ================= HEADER ================= -->
 
-    <h1>Loly's ☕</h1>
+    <header>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+        <h1>Loly's</h1>
 
-    <nav id="menu">
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
-        <a href="#inicio">Inicio</a>
-        <a href="#galeria">favoritos</a>
-        <a href="https://drive.google.com/file/d/1d3PbquUmglHAZVSlq8MhLNF-oNrGcJ-i/view?usp=drivesdk" target="_blank">Menú</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#contacto">Contacto</a>
+        <nav id="menu">
 
-    </nav>
+            <a href="#inicio">Inicio</a>
+            <a href="https://drive.google.com/file/d/1d3PbquUmglHAZVSlq8MhLNF-oNrGcJ-i/view?usp=drivesdk" target="_blank">Menú</a>
+            <a href="#galeria">Nuestros favoritos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contacto">Contacto</a>
 
-</header>
+        </nav>
 
-<section class="hero" id="inicio">
-
-    <div class="hero-text">
-
-        <img src="images/logo.png" alt="Logo Loly´s" class="logo">
-
-        <h1>Loly´s Cafetería</h1>
-
-        <h2>Tu rincón favorito</h2>
+    </header>
 
 
-        <a href="https://drive.google.com/file/d/1s27x1NlBsDJptTjDzrTaidWSs4TRZvSj/view?usp=drivesdk"
-     target="_blank"
-     class="boton">
-     Ver Menú</a>
+    <!-- ================= INICIO ================= -->
 
-    </div>
+    <section id="inicio" class="hero">
 
-</section>
+        <div class="hero-text">
 
-<section id="galeria">
+            <img 
+                src="images/logo.png" 
+                alt="Logo de Loly's Cafetería" 
+                class="logo"
+            >
 
-    <h2>Nuestros favoritos</h2>
+            <h1>Loly's Cafetería</h1>
 
-    <div class="galeria">
+            <h2>Tu rincón favorito</h2>
 
-        <img src="images/cafeteria.jpeg" alt="">
-        <img src="images/frappe.jpg" alt="">
-        <img src="images/latte.jpg" alt="">
-        <img src="images/croisant.jpg" alt="">
+            <div class="botones-hero">
+                <a href="https://drive.google.com/file/d/1d3PbquUmglHAZVSlq8MhLNF-oNrGcJ-i/view?usp=drivesdk" target="_blank" class="boton">
+                    Ver el menú
+                </a>
 
-    </div>
+                <button id="btn-aniversario" class="boton boton-aniversario">
+                    🎉 6to Aniversario
+                </button>
+            </div>
 
-</section>
+        </div>
 
-<section id="nosotros">
+    </section>
 
-<h2>Misión</h2>
 
-<p>
-Crear un espacio acogedor donde cada persona se sienta como en casa, compartiendo café y alimentos preparados con calidad, 
-mientras vive momentos de convivencia, tranquilidad y conexión. En Loly’s creemos que una taza de café es el inicio de una conversación, 
-una celebración, una idea o un recuerdo que permanecerá para siempre. Por eso servimos cada platillo con respeto, 
-honestidad y un servicio cercano que haga sentir bien a quienes nos visitan.
-</p>
+    <!-- ================= GALERÍA ================= -->
 
-<h2>Visión</h2>
+    <section id="galeria" class="reveal">
 
-<p>
-Ser una de las cafeterías más queridas y reconocidas por su calidez, calidad y servicio, 
-llevando la esencia de Loly’s a nuevos lugares sin perder lo que nos hace únicos: hacer que cada persona se sienta en casa. Queremos crecer generando oportunidades para nuestra comunidad, 
-especialmente para jóvenes y estudiantes, y convertirnos en ese lugar al que las personas regresen para estudiar, trabajar, celebrar, 
-conversar y crear recuerdos que las acompañen toda la vida.
-</p>
+        <h2>Nuestros favoritos</h2>
 
-</section>
+        <div class="galeria">
 
-<section id="ubicacion">
+            <img 
+                src="images/oreo.jpg" 
+                alt="Interior de Loly's Cafetería"
+            >
 
-<h2>Ubicación</h2>
+            <img 
+                src="images/frappe.jpg" 
+                alt="Café de Loly's Cafetería"
+            >
 
-<p>
-📍 Calle Principal, Timucuy, Yucatán, México.
-</p>
+            <img 
+                src="images/caramel.jpg" 
+                alt="Bebida de Loly's Cafetería"
+            >
 
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d452.8186369986559!2d-89.5129213386298!3d20.810503424528182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f566500271847b9%3A0x7ec583fe0e826316!2zTG9seeKAmXM!5e0!3m2!1ses-419!2smx!4v1783055260533!5m2!1ses-419!2smx" 
-width="600" 
-height="450" 
-style="border:0;" allowfullscreen="" 
-loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
-</iframe>
+            <img 
+                src="images/croisant.jpg" 
+                alt="Espacio de Loly's Cafetería"
+            >
 
-</section>
+            <img 
+                src="images/xile.jpg" 
+                alt="Bebida de Loly's Cafetería"
+            >
 
-<section id="contacto">
+        </div>
 
-    <h2>Contáctanos</h2>
+    </section>
 
-    <div class="contactos">
 
-    <a href="https://www.instagram.com/lolyscoffe/" target="_blank" class="contacto">
-        <i class="fa-brands fa-instagram"></i>
-        Instagram
-    </a>
+    <!-- ================= NOSOTROS ================= -->
 
-    <a href="https://www.tiktok.com/@soynathv?_r=1&_t=ZS-97uGpi49obU" target="_blank" class="contacto">
-        <i class="fa-brands fa-tiktok"></i>
-        TikTok
-    </a>
+    <section id="nosotros" class="reveal">
 
-    <a href="https://wa.me/529991901718" target="_blank" class="contacto">
-        <i class="fa-brands fa-whatsapp"></i>
-        WhatsApp
-    </a>
+        <h2>Misión</h2>
 
-    <a href="https://www.facebook.com/Lolys.tim?locale=es_LA" target="_blank" class="contacto">
-        <i class="fa-brands fa-facebook"></i>
-        Facebook
-    </a>
+     <p>
+     Crear un espacio acogedor donde cada persona se sienta como en casa, compartiendo café y alimentos preparados con calidad, 
+     mientras vive momentos de convivencia, tranquilidad y conexión. En Loly’s creemos que una taza de café es el inicio de una conversación, 
+     una celebración, una idea o un recuerdo que permanecerá para siempre. Por eso servimos cada platillo con respeto, 
+     honestidad y un servicio cercano que haga sentir bien a quienes nos visitan.
+     </p>
 
-</div>
+     <h2>Visión</h2>
 
-</section>
+     <p>
+     Ser una de las cafeterías más queridas y reconocidas por su calidez, calidad y servicio, 
+     llevando la esencia de Loly’s a nuevos lugares sin perder lo que nos hace únicos: hacer que cada persona se sienta en casa. Queremos crecer generando oportunidades para nuestra comunidad, 
+     especialmente para jóvenes y estudiantes, y convertirnos en ese lugar al que las personas regresen para estudiar, trabajar, celebrar, 
+     conversar y crear recuerdos que las acompañen toda la vida.
+     </p>
 
-<footer>
 
-<p>© 2026 Loly´s Cafetería - Todos los derechos reservados.</p>
+    </section>
 
-</footer>
 
-<script>
+    <!-- ================= UBICACIÓN ================= -->
 
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
+    <section id="ubicacion" class="reveal">
 
-menuToggle.addEventListener("click",()=>{
+        <h2>Visítanos</h2>
 
-    menu.classList.toggle("active");
+        <p class="texto-centro">
+            📍 Calle Principal, Timucuy, Yucatán, México.
+        </p>
 
-    if(menu.classList.contains("active")){
+        <div class="mapa">
 
-        menuToggle.innerHTML="✕";
+            <!-- Sustituye este enlace por tu ubicación -->
 
-    }else{
+         <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d452.8186369986559!2d-89.5129213386298!3d20.810503424528182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f566500271847b9%3A0x7ec583fe0e826316!2zTG9seeKAmXM!5e0!3m2!1ses-419!2smx!4v1783055260533!5m2!1ses-419!2smx" 
+         width="600" 
+         height="450" 
+         style="border:0;" allowfullscreen="" 
+         loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+         </iframe>
 
-        menuToggle.innerHTML="☰";
 
-    }
+        </div>
 
-});
+    </section>
 
-document.querySelectorAll("#menu a").forEach(link=>{
 
-    link.addEventListener("click",()=>{
+    <!-- ================= CONTACTO ================= -->
 
-        menu.classList.remove("active");
-        menuToggle.innerHTML="☰";
+    <section id="contacto" class="reveal">
 
-    });
+        <h2>Contacto</h2>
 
-});
+        <p>
+            Síguenos y mantente al día con Loly's.
+        </p>
 
-</script>
+        <div class="contactos">
+
+            <a 
+                href="https://www.instagram.com/lolyscoffe/"
+                target="_blank"
+                class="contacto"
+            >
+                Instagram
+            </a>
+
+            <a 
+                href="https://www.tiktok.com/@soynathv?_r=1&_t=ZS-97uGpi49obU"
+                target="_blank"
+                class="contacto"
+            >
+                TikTok
+            </a>
+
+            <a 
+                href="https://wa.me/529991901718"
+                target="_blank"
+                class="contacto"
+            >
+                WhatsApp
+            </a>
+
+            <a 
+                href="https://www.facebook.com/Lolys.tim?locale=es_LA"
+                target="_blank"
+                class="contacto"
+            >
+                Facebook
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="reveal">
+
+        <p>
+            © 2026 Loly's Cafetería
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- Librería de Confeti (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
