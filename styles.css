@@ -96,7 +96,7 @@ nav a:hover {
 .hero {
     min-height: 100vh;
 
-    background-image: url("images/cafeteria.jpeg");
+    background-image: url("images/portada.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -703,5 +703,74 @@ footer {
         opacity: 1;
 
         animation: none;
+    }
+}
+/* =====================================================
+   ANIMACIÓN DEL GLOBO DE ANIVERSARIO
+===================================================== */
+
+.globo-aniversario {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 150px;
+    background: radial-gradient(circle at 30% 30%, #FFE89C, #FFD369, #C8952A);
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    box-shadow: inset -10px -10px 20px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    color: #502522;
+    z-index: 2000;
+    pointer-events: none;
+    animation: flotarGlobo 4s ease-out forwards;
+}
+
+/* Nudo del globo */
+.globo-aniversario::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 16px;
+    height: 10px;
+    background: #C8952A;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+/* Cuerda del globo */
+.globo-aniversario::after {
+    content: "";
+    position: absolute;
+    bottom: -68px;
+    width: 2px;
+    height: 60px;
+    background: rgba(80, 37, 34, 0.5);
+}
+
+/* Trayectoria de elevación y flotación */
+@keyframes flotarGlobo {
+    0% {
+        bottom: -150px;
+        opacity: 0;
+        transform: translateX(-50%) rotate(-5deg);
+    }
+    15% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-40%) rotate(6deg);
+    }
+    75% {
+        transform: translateX(-60%) rotate(-4deg);
+    }
+    100% {
+        bottom: 80vh;
+        opacity: 0;
+        transform: translateX(-50%) rotate(3deg);
     }
 }

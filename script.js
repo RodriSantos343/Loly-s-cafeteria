@@ -34,17 +34,27 @@ elementos.forEach(elemento => {
 
 });
 
-// Seleccionamos el botón de 6to Aniversario
 const btnAniversario = document.getElementById('btn-aniversario');
 
 if (btnAniversario) {
     btnAniversario.addEventListener('click', () => {
-        // Lanzar lluvia de confeti continua durante 3 segundos
-        const duracion = 3 * 1000; // 3 segundos
+        
+        // 1. CREAR Y MOSTRAR EL GLOBO CON EL NÚMERO 6
+        const globo = document.createElement('div');
+        globo.classList.add('globo-aniversario');
+        globo.textContent = '6';
+        document.body.appendChild(globo);
+
+        // Eliminar el nodo del DOM cuando termine la animación (4s)
+        setTimeout(() => {
+            globo.remove();
+        }, 4000);
+
+        // 2. LLUVIA DE CONFETI DE 3 SECUNDOS
+        const duracion = 3 * 1000;
         const fin = Date.now() + duracion;
 
-        (function lanzar() {
-            // Lado izquierdo
+        (function lanzarConfeti() {
             confetti({
                 particleCount: 5,
                 angle: 60,
@@ -53,7 +63,6 @@ if (btnAniversario) {
                 colors: ['#FFD369', '#d4a373', '#502522', '#ffffff']
             });
 
-            // Lado derecho
             confetti({
                 particleCount: 5,
                 angle: 120,
@@ -63,7 +72,7 @@ if (btnAniversario) {
             });
 
             if (Date.now() < fin) {
-                requestAnimationFrame(lanzar);
+                requestAnimationFrame(lanzarConfeti);
             }
         })();
     });
